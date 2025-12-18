@@ -1,3 +1,19 @@
+from manim import *
+
+class TaylorSeries(Scene):
+    def construct(self):
+        # 1. Create Axes
+        axes = Axes(x_range=[-3, 3], y_range=[-2, 2])
+        
+        # 2. Draw the base function (cos x)
+        func = axes.plot(lambda x: np.cos(x), color=RED)
+        
+        # 3. Create a Taylor Polynomial that updates
+        # You would use a ValueTracker to iterate through terms
+        # and use always_redraw to update the curve and the text
+        
+        self.play(Create(axes), Create(func))
+        self.wait()
 ==========
 Quickstart
 ==========
